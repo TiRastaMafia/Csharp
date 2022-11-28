@@ -1,7 +1,7 @@
 
-Console.WriteLine("Введите число A");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ A :");
 int A = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ B :");
 int B = Convert.ToInt32(Console.ReadLine());
 int numt(int A, int B)
 {
@@ -14,15 +14,15 @@ int numt(int A, int B)
     return result;
 }
 Console.Write(numt(A, B));
-//=================================================    ВАРИАНТ № 2 РЕШЕНИЯ БЕЗ Convert.ToInt32    ============================================================================
+//=================================================    Г‚ГЂГђГ€ГЂГЌГ’ В№ 2 ГђГ…ГГ…ГЌГ€Гџ ГЃГ…Г‡ Convert.ToInt32    ============================================================================
 
 // while (true)
 // {
-//     Console.Write("Введите число A: ");
+//     Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® A: ");
 //     string A = Console.ReadLine();
 //     if (int.TryParse(A, out int number1))
 //     {
-//         Console.Write("Введите число B: ");
+//         Console.Write("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® B: ");
 //         string B = Console.ReadLine();
 //         if (int.TryParse(B, out int number2))
 //         {
@@ -38,18 +38,18 @@ Console.Write(numt(A, B));
 //                 }
 //                 return result;
 //             }
-//             Console.Write($"Ваш результат равен ----> {numt(A1, B1)}");
+//             Console.Write($"Г‚Г Гё Г°ГҐГ§ГіГ«ГјГІГ ГІ Г°Г ГўГҐГ­ ----> {numt(A1, B1)}");
 //             break;
 //         }
 //         else
 //         {
-//             Console.WriteLine($"Не удалось распознать число {B}, попробуйте еще раз.");
+//             Console.WriteLine($"ГЌГҐ ГіГ¤Г Г«Г®Г±Гј Г°Г Г±ГЇГ®Г§Г­Г ГІГј Г·ГЁГ±Г«Г® {B}, ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№ГҐ Г°Г Г§.");
 //             // break;
 //         }
 //     }
 //     else
 //     {
-//         Console.WriteLine($"Не удалось распознать число {A}, попробуйте еще раз.");
+//         Console.WriteLine($"ГЌГҐ ГіГ¤Г Г«Г®Г±Гј Г°Г Г±ГЇГ®Г§Г­Г ГІГј Г·ГЁГ±Г«Г® {A}, ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№ГҐ Г°Г Г§.");
 //         // break;
 //     }
 
