@@ -1,40 +1,29 @@
-// Ввод координат двух точек по осям X Y Z
-/*double distance;
-Console.Write("Введите значение x1: ");
-double x1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите значение x2: ");
-double x2 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите значение y1: ");
-double y1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите значение y2: ");
-double y2 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите значение z1: ");
-double z1 = Convert.ToDouble(Console.ReadLine());
-Console.Write("Введите значение z2: ");
-double z2 = Convert.ToDouble(Console.ReadLine());
-distance = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2) + Math.Pow(z2 - z1, 2));
-Console.WriteLine($"Расстояние между двумя точками в пространстве равно {distance}");
-Console.ReadKey();*/
+/*
+Р—Р°РґР°С‡Р° 21
+РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РїСЂРёРЅРёРјР°РµС‚ РЅР° РІС…РѕРґ РєРѕРѕСЂРґРёРЅР°С‚С‹ РґРІСѓС… С‚РѕС‡РµРє Рё РЅР°С…РѕРґРёС‚ СЂР°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РЅРёРјРё РІ 3D РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ.
+A (3,6,8); B (2,1,-7), -> 15.84
+A (7,-5, 0); B (1,-1,9) -> 11.53
+*/
+double formula_length ()
 
-
-
-
-
-
-internal class Program
 {
-    private static void Main(string[] args)
-    {
-// Приглашение к вводу координат
-        Console.WriteLine("Введите через пробел значения x1, y1, z1, x2, y2, z2, нажмите enter"); 
-// Создание массива и инициализирование элементов с клавиатуры 
-        double[] array = Console.ReadLine().Split(' ').Select(i => double.Parse(i)).ToArray();
-// Проверка на правильность заполнения количества координат при ошибке рестарт
-            if (array.Length != 6){
-            System.Console.WriteLine("Вы ввели неправильные координаты");
-                return;
-            }
-// Расчет расстояния между 2-мя точками в пространстве по формуле https://calculatorium.ru/math/distance-between-two-points-in-3d
-        Console.WriteLine(Math.Sqrt(Math.Pow(array[3] - array[0], 2) + Math.Pow(array[4] - array[1], 2) + Math.Pow(array[5] - array[2], 2)));
-    }
+    Console.WriteLine("РўРѕС‡РєР° 1 РєРѕРѕСЂРґРёРЅР°С‚С‹ X");
+    int point_1_X = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("РўРѕС‡РєР° 1 РєРѕРѕСЂРґРёРЅР°С‚С‹ Y");
+    int point_1_Y = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("РўРѕС‡РєР° 1 РєРѕРѕСЂРґРёРЅР°С‚С‹ Z");
+    int point_1_Z = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("РўРѕС‡РєР° 2 РєРѕРѕСЂРґРёРЅР°С‚С‹ X");
+    int point_2_X = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("РўРѕС‡РєР° 2 РєРѕРѕСЂРґРёРЅР°С‚С‹ Y");
+    int point_2_Y = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("РўРѕС‡РєР° 2 РєРѕРѕСЂРґРёРЅР°С‚С‹ Z");
+    int point_2_Z = Convert.ToInt32(Console.ReadLine());
+
+    double result = Math.Sqrt(Math.Pow(point_1_X - point_2_X, 2) + Math.Pow(point_1_Y - point_2_Y, 2)+ Math.Pow(point_1_Z - point_2_Z, 2));
+    return result;
 }
+
+double resulting = formula_length();
+Console.WriteLine(resulting);
