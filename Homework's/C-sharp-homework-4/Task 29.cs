@@ -1,8 +1,5 @@
-Console.WriteLine("Введите массив из введенных через запятую цифр\n ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ РјР°СЃСЃРёРІ РёР· РІРІРµРґРµРЅРЅС‹С… С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ С†РёС„СЂ\n ");
 string str = Console.ReadLine();
 char[] arr;
 arr = str.ToCharArray();
 Console.WriteLine("[{0}]", str);
-// Для проверки на массив раскомментируйте две строки ниже этого сообщения
-// foreach (char c in arr)
-// Console.WriteLine(c);
