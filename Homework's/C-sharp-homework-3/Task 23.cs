@@ -1,30 +1,34 @@
-//Çàäà÷à 23: Íàïèøèòå ïğîãğàììó, êîòîğàÿ ïğèíèìàåò íà âõîä ÷èñëî (N) è âûäà¸ò òàáëèöó êóáîâ ÷èñåë îò 1 äî N.
-// 3 -> 1, 8, 27
-// 5 -> 1, 8, 27, 64, 125
+/*
+Ğ—Ğ°Ğ´Ğ°Ñ‡Ğ° 23. ĞĞ°Ğ¿Ğ¸ÑˆĞ¸Ñ‚Ğµ Ğ¿Ñ€Ğ¾Ğ³Ñ€Ğ°Ğ¼Ğ¼Ñƒ, ĞºĞ¾Ñ‚Ğ¾Ñ€Ğ°Ñ Ğ¿Ñ€Ğ¸Ğ½Ğ¸Ğ¼Ğ°ĞµÑ‚ Ğ½Ğ° Ğ²Ñ…Ğ¾Ğ´ Ñ‡Ğ¸ÑĞ»Ğ¾ (N) Ğ¸ Ğ²Ñ‹Ğ´Ğ°Ñ‘Ñ‚ Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñƒ ĞºÑƒĞ±Ğ¾Ğ² Ñ‡Ğ¸ÑĞµĞ» Ğ¾Ñ‚ 1 Ğ´Ğ¾ N.
+3 -> 1, 8, 27; 5 -> 1, 8, 27, 64, 125;
+*/
 
-
-Console.Write("Ââåäèòå ÷èñëî: ");
-int cube = Convert.ToInt32(Console.ReadLine());
-
-void Cube(int[] cube)
+int getNumberFromUser(string userInformation)
 {
-  int counter = 0;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
-  }
+    int result = 0;
+    Console.Write($"{userInformation} ");
+    while (!int.TryParse(Console.ReadLine(), out result) || result <= 1)
+    {
+        Console.Write($"ĞÑˆĞ¸Ğ±ĞºĞ° Ğ²Ğ²Ğ¾Ğ´Ğ°! ĞĞ¶Ğ¸Ğ´Ğ°ĞµÑ‚ÑÑ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ ĞµĞ´Ğ¸Ğ½Ğ¸Ñ†Ñ‹. {userInformation} ");
+    }
+    return result;
 }
 
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 1;
-  while(index < count){
-    Console.Write(coll[index]+ " ");
-    index++;
-  }
-} 
+int number = getNumberFromUser("Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ñ†ĞµĞ»Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾ N > 1: ");
 
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
+int[] tableQuarterNumber(int number)
+{
+int[] result = new int [number];
+for(int i = 1; i <= number; i++)
+{
+result[i - 1] = (int)(Math.Pow(i, 3));
+}
+return result;
+}
+
+int[] table = tableQuarterNumber(number);
+
+foreach (var value in table)
+{
+Console.Write(value + " ");
+}
