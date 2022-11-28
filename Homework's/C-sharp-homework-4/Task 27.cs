@@ -1,4 +1,4 @@
-System.Console.WriteLine("Введите число: ");
+System.Console.WriteLine("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
 int number = Convert.ToInt32(Console.ReadLine()); ;
 int sum = 0;
 for (; ; )
