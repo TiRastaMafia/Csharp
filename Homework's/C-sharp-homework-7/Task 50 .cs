@@ -1,16 +1,16 @@
 
-//  Напишите программу, которая на вход принимает позиции элемента либо значение элемента в двумерном массиве,
-// и возвращает значение либо индекс этого элемента или же указание, что такого элемента нет.
+//  РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РЅР° РІС…РѕРґ РїСЂРёРЅРёРјР°РµС‚ РїРѕР·РёС†РёРё СЌР»РµРјРµРЅС‚Р° Р»РёР±Рѕ Р·РЅР°С‡РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РґРІСѓРјРµСЂРЅРѕРј РјР°СЃСЃРёРІРµ,
+// Рё РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ Р»РёР±Рѕ РёРЅРґРµРєСЃ СЌС‚РѕРіРѕ СЌР»РµРјРµРЅС‚Р° РёР»Рё Р¶Рµ СѓРєР°Р·Р°РЅРёРµ, С‡С‚Рѕ С‚Р°РєРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РЅРµС‚.
 
-Console.WriteLine("Введите размерность массива через запятую: ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РјР°СЃСЃРёРІР° С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ: ");
 string size = Console.ReadLine();
 string[] mass = size.Split(",");
 int[,] massive = new int[Convert.ToInt32(mass[0]), Convert.ToInt32(mass[1])];
-Console.WriteLine("Введите искомое число: ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ РёСЃРєРѕРјРѕРµ С‡РёСЃР»Рѕ: ");
 int FindNumber = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите № строки: ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ в„– СЃС‚СЂРѕРєРё: ");
 int m = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите № столбца: ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ в„– СЃС‚РѕР»Р±С†Р°: ");
 int n = Convert.ToInt16(Console.ReadLine());
 int count = 0;
 
@@ -53,16 +53,16 @@ void FillNewMatrix(int[,] newArray, int[,] array)
                 SaveNumber = array[i, j];
                 row = i;
                 colunm = j;
-                Console.WriteLine($"{FindNumber} --> такой элемент есть и находится по индексу {row}, {colunm}");
+                Console.WriteLine($"{FindNumber} --> С‚Р°РєРѕР№ СЌР»РµРјРµРЅС‚ РµСЃС‚СЊ Рё РЅР°С…РѕРґРёС‚СЃСЏ РїРѕ РёРЅРґРµРєСЃСѓ {row}, {colunm}");
             }
             else count++;
             if (count == newArray.GetLength(0) * newArray.GetLength(1))
             {
-                Console.WriteLine($"{FindNumber} число отсутствует в матрице");
+                Console.WriteLine($"{FindNumber} С‡РёСЃР»Рѕ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РІ РјР°С‚СЂРёС†Рµ");
             }
             if (m == i && n == j)
             {
-                Console.WriteLine($"по заданным Вами координатам находится число {array[i, j]}");
+                Console.WriteLine($"РїРѕ Р·Р°РґР°РЅРЅС‹Рј Р’Р°РјРё РєРѕРѕСЂРґРёРЅР°С‚Р°Рј РЅР°С…РѕРґРёС‚СЃСЏ С‡РёСЃР»Рѕ {array[i, j]}");
             }
 
         }
