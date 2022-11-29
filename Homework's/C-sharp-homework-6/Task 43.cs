@@ -1,5 +1,5 @@
-Console.WriteLine("Введите:\n\r'b1' \n\r'k1' \n\r'b2' \n\r'k2'");
-// значения заводим в массив с клавиатуры
+Console.WriteLine("Р’РІРµРґРёС‚Рµ:\n\r'b1' \n\r'k1' \n\r'b2' \n\r'k2'");
+// Р·РЅР°С‡РµРЅРёСЏ Р·Р°РІРѕРґРёРј РІ РјР°СЃСЃРёРІ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 // AB CD
 double x = 0;
 double y = 0;
@@ -9,10 +9,10 @@ double[] numbers = { 0, 0, 0, 0 };
     numbers[i] = Convert.ToInt16(Console.ReadLine());
 }
 if(((numbers[1] == numbers[3]) && (numbers[0] == numbers[2]))){
-    System.Console.WriteLine("Прямые совпадают");
+    System.Console.WriteLine("РџСЂСЏРјС‹Рµ СЃРѕРІРїР°РґР°СЋС‚");
 }
 else if (numbers[1]==numbers[3]){
-    System.Console.WriteLine("Прямые паралельны");
+    System.Console.WriteLine("РџСЂСЏРјС‹Рµ РїР°СЂР°Р»РµР»СЊРЅС‹");
 }
 else{
     x = (numbers[2]-numbers[0])/(numbers[1]-numbers[3]);
