@@ -1,9 +1,9 @@
-Console.WriteLine("Введите диагональ массива: ");
+Console.WriteLine("Р’РІРµРґРёС‚Рµ РґРёР°РіРѕРЅР°Р»СЊ РјР°СЃСЃРёРІР°: ");
 int N = Convert.ToInt16(Console.ReadLine());
 int final_element = N - 1;
 int num = 1;
 
-// int delta = 0; // Поменять рамку заполнения где 1 самая полная
+// int delta = 0; // РџРѕРјРµРЅСЏС‚СЊ СЂР°РјРєСѓ Р·Р°РїРѕР»РЅРµРЅРёСЏ РіРґРµ 1 СЃР°РјР°СЏ РїРѕР»РЅР°СЏ
 int[,] numbers = new int[N, N];
 
 void CreateSumm_array_array2(int[,] numbers)
@@ -15,7 +15,7 @@ void CreateSumm_array_array2(int[,] numbers)
             numbers[0 + delta, i] = num;
             num++;
         }
-        num--; // уменьшение num для исключения наложения при переключении стороны
+        num--; // СѓРјРµРЅСЊС€РµРЅРёРµ num РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ РЅР°Р»РѕР¶РµРЅРёСЏ РїСЂРё РїРµСЂРµРєР»СЋС‡РµРЅРёРё СЃС‚РѕСЂРѕРЅС‹
         for (int i = 0 + delta; i < N - delta; i++)
         {
             numbers[i, final_element - delta] = num;
