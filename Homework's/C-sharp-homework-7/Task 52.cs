@@ -1,8 +1,8 @@
-// Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Р—Р°РґР°Р№С‚Рµ РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ РёР· С†РµР»С‹С… С‡РёСЃРµР». РќР°Р№РґРёС‚Рµ СЃСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ СЌР»РµРјРµРЅС‚РѕРІ РІ РєР°Р¶РґРѕРј СЃС‚РѕР»Р±С†Рµ.
 
-Console.WriteLine("введите количество строк");
+Console.WriteLine("РІРІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите количество столбцов");
+Console.WriteLine("РІРІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ");
 int m = Convert.ToInt32(Console.ReadLine());
 int[,] numbers = new int[n, m];
 
@@ -50,5 +50,5 @@ void FillNewMatrix(int[,] newArray, int[,] numbers)
 FillMatrix(numbers);
 PrintMatrix(numbers);
 int[,] newMass = new int[numbers.GetLength(0), numbers.GetLength(1)];
-Console.WriteLine("Среднее арифметическое каждого столбца: ");
+Console.WriteLine("РЎСЂРµРґРЅРµРµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ РєР°Р¶РґРѕРіРѕ СЃС‚РѕР»Р±С†Р°: ");
 FillNewMatrix(newMass, numbers);
