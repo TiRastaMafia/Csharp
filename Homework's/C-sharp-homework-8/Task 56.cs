@@ -14,7 +14,7 @@ WriteArray(array);
 int sumLine = SumLineElements(array, 0);
 for (int i = 1; i < array.GetLength(0); i++)
 {
-    // нахождение строки с минимальной суммой элементов
+    // РЅР°С…РѕР¶РґРµРЅРёРµ СЃС‚СЂРѕРєРё СЃ РјРёРЅРёРјР°Р»СЊРЅРѕР№ СЃСѓРјРјРѕР№ СЌР»РµРјРµРЅС‚РѕРІ
   int SumLineElem = SumLineElements(array, i);
   if (sumLine > SumLineElem)
   {
@@ -28,7 +28,7 @@ Console.WriteLine($"\n{minSumLine+1} line - with the smallest sum elements = {su
 int SumLineElements(int[,] array, int i)
 {
   int sumLine = array[i,0];
-//   Сумма элементов строки
+//   РЎСѓРјРјР° СЌР»РµРјРµРЅС‚РѕРІ СЃС‚СЂРѕРєРё
   for (int j = 1; j < array.GetLength(1); j++)
   {
     sumLine += array[i,j];
